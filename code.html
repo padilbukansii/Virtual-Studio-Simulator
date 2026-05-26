@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Tata Cahaya 3D - Virtual Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb866",
+                    "tertiary-container": "#2c3647",
+                    "surface-variant": "#e0e3e5",
+                    "primary-container": "#1a365d",
+                    "tertiary": "#172131",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#adc7f7",
+                    "surface-container": "#ebeef0",
+                    "on-primary-fixed": "#001b3c",
+                    "error": "#ba1a1a",
+                    "background": "#f7fafc",
+                    "surface-container-low": "#f1f4f6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#959fb3",
+                    "on-secondary-fixed-variant": "#673d00",
+                    "outline-variant": "#c4c6cf",
+                    "primary-fixed-dim": "#adc7f7",
+                    "on-tertiary-fixed-variant": "#3d4759",
+                    "primary-fixed": "#d6e3ff",
+                    "on-tertiary-fixed": "#121c2c",
+                    "surface-tint": "#455f88",
+                    "surface-bright": "#f7fafc",
+                    "secondary-fixed": "#ffddba",
+                    "tertiary-fixed": "#d9e3f9",
+                    "on-surface-variant": "#43474e",
+                    "surface-dim": "#d7dadc",
+                    "primary": "#002045",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#2b1700",
+                    "on-background": "#181c1e",
+                    "on-primary-container": "#86a0cd",
+                    "on-surface": "#181c1e",
+                    "outline": "#74777f",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-fixed-dim": "#bdc7dc",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface": "#f7fafc",
+                    "secondary": "#875200",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#ffb55c",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "on-secondary-container": "#744600",
+                    "inverse-on-surface": "#eef1f3",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e5e9eb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "base": "4px",
+                    "xl": "32px",
+                    "margin": "20px",
+                    "md": "16px",
+                    "xs": "8px",
+                    "sm": "12px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-lighting-item {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- Header / Top App Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin h-16 bg-background/80 backdrop-blur-md shadow-sm">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="text-headline-md font-headline-md font-bold text-primary">Tata Cahaya 3D</h1>
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container text-label-md font-bold">
+            JS
+        </div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 pt-16 pb-28">
+<!-- 3D Perspective Viewport -->
+<section class="relative w-full aspect-square md:aspect-video flex items-center justify-center bg-white">
+<div class="absolute inset-0 z-0">
+<img alt="3D Studio Mockup" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ui7B7sq_-Ed5gMevg2D4yZuLl-gU29qT8p_ArIdADLGeh1Nn0kiwWPJ90sZ1bQwgyuENu4HUcMc3uG6vAKhR0BteQ8znfjMznYIIqpoTfFt23LIH_K71Gu5vyAei9127Unxdf5SEEB-gLF02R_wWIZHMcvPDjFWpvv19UI62CHjokN2x_fkFyguwaI9UD5G-yAwxrKAWomKjTZH2JWpl-Io_bFBKrMsHburgZS-hu6ApLUDIJhWseWg9A"/>
+</div>
+<!-- Contextual UI Elements on top of 3D View (Simulated Labels) -->
+<div class="absolute top-1/4 left-margin flex flex-col items-start pointer-events-none opacity-80">
+<span class="text-label-sm font-label-md px-2 py-0.5 bg-primary-container/10 text-primary border border-primary/20 rounded">KEY LIGHT</span>
+<div class="w-px h-12 bg-primary/40 ml-4 rotate-[-45deg]"></div>
+</div>
+<div class="absolute top-12 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none opacity-80">
+<span class="text-label-sm font-label-md px-2 py-0.5 bg-primary-container/10 text-primary border border-primary/20 rounded">FILL LIGHT</span>
+<div class="w-px h-8 bg-primary/40"></div>
+</div>
+<div class="absolute top-1/4 right-margin flex flex-col items-end pointer-events-none opacity-80">
+<span class="text-label-sm font-label-md px-2 py-0.5 bg-primary-container/10 text-primary border border-primary/20 rounded">BACK LIGHT</span>
+<div class="w-px h-12 bg-primary/40 mr-4 rotate-[45deg]"></div>
+</div>
+</section>
+<!-- Control Panel -->
+<section class="px-margin pt-lg space-y-md">
+<div class="bg-surface-container-low rounded-xl p-md shadow-sm">
+<h2 class="text-label-md font-headline-md text-on-surface-variant mb-md">Kontrol Simulasi</h2>
+<div class="space-y-sm">
+<!-- Checkbox Item 1 -->
+<label class="flex items-center justify-between p-sm bg-white rounded-lg border border-outline-variant/30 active:scale-[0.98] transition-all cursor-pointer">
+<span class="text-body-md font-headline-md text-primary">Toggle Posisi Lampu Utama</span>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</div>
+</label>
+<!-- Checkbox Item 2 -->
+<label class="flex items-center justify-between p-sm bg-white rounded-lg border border-outline-variant/30 active:scale-[0.98] transition-all cursor-pointer">
+<span class="text-body-md font-headline-md text-primary">Atur Intensitas Cahaya</span>
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Additional Professional Detail: Interactive Grid -->
+<div class="grid grid-cols-4 gap-sm pt-base">
+<button class="aspect-square bg-primary-container text-white rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-md" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+<span class="text-[10px] font-label-md">Main</span>
+</button>
+<button class="aspect-square bg-surface-container-highest text-primary rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-md">grid_view</span>
+<span class="text-[10px] font-label-md">Presets</span>
+</button>
+<button class="aspect-square bg-surface-container-highest text-primary rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-md">palette</span>
+<span class="text-[10px] font-label-md">Color</span>
+</button>
+<button class="aspect-square bg-surface-container-highest text-primary rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-md">settings_input_component</span>
+<span class="text-[10px] font-label-md">Manual</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface-container-lowest dark:bg-inverse-surface shadow-[0px_-4px_12px_rgba(26,54,93,0.08)] rounded-t-xl">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-1">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-1">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+<span class="text-label-sm font-label-sm">Camera</span>
+</button>
+<!-- ACTIVE TAB: Lighting -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined active-lighting-item" data-icon="light_mode">light_mode</span>
+<span class="text-label-sm font-label-sm">Lighting</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-1">
+<span class="material-symbols-outlined" data-icon="movie_edit">movie_edit</span>
+<span class="text-label-sm font-label-sm">Edit</span>
+</button>
+</nav>
+<script>
+        // Micro-interaction for the toggle labels to feel responsive
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const labelContainer = this.closest('label');
+                if (this.checked) {
+                    labelContainer.classList.add('border-primary-container/40');
+                    labelContainer.classList.add('bg-primary-container/[0.02]');
+                } else {
+                    labelContainer.classList.remove('border-primary-container/40');
+                    labelContainer.classList.remove('bg-primary-container/[0.02]');
+                }
+            });
+        });
+
+        // Initialize state for checked items
+        document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+            const labelContainer = checkbox.closest('label');
+            labelContainer.classList.add('border-primary-container/40');
+            labelContainer.classList.add('bg-primary-container/[0.02]');
+        });
+    </script>
+</body></html>
